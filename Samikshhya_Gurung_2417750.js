@@ -26,7 +26,6 @@ async function fetchData(cityName) {
     const response = await fetch(url);
     if (!response.ok) {
       // add error
-      console.log("SDFnlsd slfds")
       error.classList.remove("hide");
       group.forEach((node) => node.classList.add("hide"));
     } else {
@@ -74,7 +73,6 @@ async function fetchData(cityName) {
     }
   } catch (error) {
     // Handle the error
-    console.error("Here",error);
     // Display an error message to the user
     error.classList.remove("hide");
     group.forEach((node) => node.classList.add("hide"));
@@ -126,7 +124,6 @@ async function pastWeatherData() {
       let weekBoxHTML = ""; // Collect HTML in a variable
       
       data.forEach((weather) => {
-        console.log(weather.Temperature+"  "+weather.Weather_Icon);
         weekBoxHTML += `
           <div class="week-box">
             <div class="date">${weather.Day_and_Date}</div>
